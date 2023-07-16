@@ -97,9 +97,11 @@ h3 {
 			align-items: center;
 			text-align:center;
 			
+			
 			& a{
 				margin-left: 32px;
 				color: #8D8D8D;
+				fill:#8D8D8D;
 			}
 		}
 	}
@@ -153,9 +155,12 @@ h3 {
 
 		.icon {
 			display: flex;
-			& img {
-				display: block;
-
+			& a{
+				fill: #916019;
+				
+			}
+			.heart {
+				margin-right: 10px;
 			}
 		}
 	}
@@ -172,7 +177,7 @@ h3 {
 			line-height: 30px;
 		}
 
-		.select{
+		& a:hover{
 			color:#AC8A46;
 			text-decoration: underline;
 		}
