@@ -47,3 +47,224 @@ table {
 	border-spacing: 0;
 }
 
+/* 商品頁 */
+
+*,*:before,*:after{ 
+	box-sizing: border-box;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: fill;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 600;
+}
+
+.container {
+	width:1920px;
+	margin: 0 auto;
+}
+
+.header {
+	
+	.top{
+		padding: 0 405px;
+		height: 56px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.menu {
+			height: 56px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			text-align:center;
+			
+			& a{
+				margin-left: 32px;
+				color: #8D8D8D;
+			}
+		}
+	}
+	.brand-list {
+		background-color: #916019;
+		display: flex;
+		padding: 14px 405px;
+
+		& a {
+			color: #fff;
+			margin-right: 28px;
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
+}
+
+.content {
+	padding: 80px 405px 40px 405px;
+
+
+	.product {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		.card {
+			margin-bottom: 58px;
+		}
+
+		.product-pic {
+			height: 255px;
+			width: 255px;
+		}
+
+		& p {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		& span {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		.sale {
+			color: #8D8D8D;
+			margin-left: 8px;
+			text-decoration: line-through;
+		}
+
+		.icon {
+			display: flex;
+			& img {
+				display: block;
+
+			}
+		}
+	}
+
+	.page {
+		padding: 20px 0 60px 0;
+		display: flex;
+		justify-content: center;
+		
+		& a{
+			padding: 0 10px;
+			color: #000;
+			font-size: 20px;
+			line-height: 30px;
+		}
+
+		.select{
+			color:#AC8A46;
+			text-decoration: underline;
+		}
+	}
+}
+
+.footer {
+	
+	.Subscribe {
+		position: relative;
+		& img {
+			width: 1920px;
+			height: 600px;
+		}
+		.remember {
+			position: absolute;
+			top: 312px;
+			left: 405px;
+
+			& p {
+				color: #8D8D8D;
+				font-size: 32px;
+				line-height: 48px;
+			}
+		}
+		.email {
+			display: flex;
+			
+			& p {
+				font-size: 16px;
+			}
+
+			.add {
+				position: absolute;
+				top: 428px;
+				left: 405px;
+				display: block;
+				padding: 20px 65px 20px 16px;
+				background-color: #fff;
+				border: 1px #916000 solid;
+				color: #8D8D8D;
+				z-index: 2;
+			}
+			.button {
+				position: absolute;
+				top: 428px;
+				left: 624px;
+				display: block;
+				padding: 21px 26px 21px 27px;
+				background-color: #916000;
+				color: #fff;
+				z-index: 3;
+				width:131px;
+			}
+		}
+	}
+
+	.footer-info {
+		height: 80px;
+		background-color: #916000;
+		color:#fff;
+		padding: 0 405px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.footer-logo {
+			display: flex;
+			align-items: center;
+
+			& p {
+				font-size: 14px;
+				line-height: 21px;
+				margin-left: 20px;
+			}
+			& img {
+				width: 128px;
+				height: 38px;
+			}
+		}
+
+		.footer-menu {
+			& a{
+				margin-left: 36px;
+				font-size: 20px;
+				line-height: 30px;
+				color: #fff;
+			}
+			
+		}
+		
+	}
+}
+
