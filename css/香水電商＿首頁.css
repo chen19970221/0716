@@ -54,8 +54,8 @@ table {
 }
 
 img {
-	height: 100%;
-	width: 100%;
+	height: auto;
+	max-width: 100%;
 	object-fit: fill;
 	display: block;
 }
@@ -84,7 +84,7 @@ p {
 }
 
 .container {
-	width:1920px;
+	max-width:1920px;
 	margin: 0 auto;
 }
 
@@ -105,58 +105,56 @@ p {
 			& a{
 				margin-left: 32px;
 				color: #8D8D8D;
+				fill:#8D8D8D;
 			}
 		}
 	}
 
 	.banner {
 		height: 870px;
-		width: 1920px;
+		max-width: 1920px;
 		position: relative;
 
 		.index1{
 		height: 870px;
-		width: 1920px;
+		width: 100%;
 		position: absolute;
 		z-index:1;
 		}
 
 		.slogan {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 295px 405px 295px 1070px;
 			
 			& h2 {
 				font-size: 40px;
 				font-weight: 700;
+				line-height: 60px;
 				color: #fff;
-				position: absolute;				
-				left: 1070px;
-				top: 351px;
 				z-index: 3;
 			}
 
 			& p	{
 				font-size: 24px;
 				color: #fff;
-				position: absolute;				
-				left: 1070px;
-				top: 411px;
 				z-index: 3;
-				width: 445px;
+				width: 100%;
 				line-height: 36px;
+				margin-bottom: 16px;
 			}
 			
 			.shop-now {
 				display: block;
 				font-size: 28px;
 				color: #fff;
-				position: absolute;				
-				left: 1070px;
-				top: 571px;
 				z-index: 3;
-				width: 445px;
+				/* width: 445px; */
 				text-align: center;
 				border: 1px #fff solid;
 				border-radius: 30px;
-				padding: 13px 0;
+				padding: 13px 109px;
 
 			}
 		}
@@ -164,13 +162,14 @@ p {
 }
 
 .Gabrielle, .Five, .CHANEL, .info {
-	padding: 0px 405px;
+	margin: 0 auto;
 	display: flex;
+	justify-content: center;
+	width: 1110px;
 
 
 	& img {
-		width: 555px;
-		height: 555px;
+		width:50%;
 	}
 }
 
@@ -178,11 +177,11 @@ p {
 .content {
 	padding: 60px 0;
 	.text {
+		width: 50%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: flex-start;
-		margin: 0 auto;
+		padding: 0 110px;
 	}
 
 	.more {
@@ -229,11 +228,21 @@ p {
 	}
 
 	.else {
-		display: flex;
-		justify-content: space-between;
-		padding: 40px 405px;
+		padding: 40px 0;
 		background-color: #E0E0E0;
 		margin: 60px 0;
+		height: auto;
+		width:100%;
+
+		.else-item {
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+		}
+
+		.Body-Wash {
+			margin:0 20px;
+		}
 
 		.else-pic {
 			width: 350px;
@@ -247,7 +256,7 @@ p {
 			line-height: 24px;
 			margin-bottom: 16px;
 		}
-
+		
 		.price {
 			display: flex;
 		}
@@ -264,8 +273,11 @@ p {
 	}
 
 	.recycle {
-		padding: 0px 405px;
+		max-width: 1100px;
+		margin: 0 auto;
 		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		.empty img {
 			width: 730px;
@@ -291,14 +303,18 @@ p {
 	
 	.Subscribe {
 		position: relative;
+		width: 100%;
+		height: 600px;
 		& img {
-			width: 1920px;
-			height: 600px;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 1;
 		}
 		.remember {
+			padding: 312px 1065px 192px 405px;
 			position: absolute;
-			top: 312px;
-			left: 405px;
+			z-index: 2;
 
 			& p {
 				color: #8D8D8D;
@@ -308,15 +324,13 @@ p {
 		}
 		.email {
 			display: flex;
-			
+			padding:428px 1065px 112px 405px;
 			& p {
 				font-size: 16px;
 			}
 
 			.add {
 				position: absolute;
-				top: 428px;
-				left: 405px;
 				display: block;
 				padding: 21px 57px 20px 16px;
 				background-color: #fff;
@@ -326,7 +340,6 @@ p {
 			}
 			.button {
 				position: absolute;
-				top: 428px;
 				left: 624px;
 				display: block;
 				padding: 21px 26px 21px 27px;
@@ -339,17 +352,18 @@ p {
 	}
 
 	.footer-info {
+		width:100%;
 		height: 80px;
 		background-color: #916000;
 		color:#fff;
-		padding: 0 405px;
 		margin: 0 auto;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		align-items: center;
 
 		.footer-logo {
 			display: flex;
+			justify-content: space-around;
 			align-items: center;
 
 			& p {
@@ -376,16 +390,7 @@ p {
 	}
 }
 
-.index1 {
-	overflow: hidden;
-}
 
-.index1 .img {
-	object-fit: cover;
-	transform: scale(1.1);
-	margin-left: -90px;
-	margin-top: 51px;
-}
 
 .cover {
 	position: relative;
@@ -401,6 +406,7 @@ p {
 		top:0;
 		left:0;
 		z-index: 1;
+		margin-bottom:8px;
 	}
 	& span {
 		position: absolute;
@@ -416,5 +422,155 @@ p {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+}
+
+.bars {
+	display: none;
+}
+
+
+@media(max-width:375px){
+	.Cart, .bars {
+		display:block;
+		fill:#8D8D8D;
+	}
+
+	.menu-icon{
+		display: none;
+	}
+
+	.banner {
+		max-width: 100%;
+		height: 480px;
+		position: relative;	
+	}
+
+	.index1 img {
+		max-width: 100%;
+		height: 480px;
+		position: absolute;	
+		margin:0;
+		z-index: 1;
+	}
+
+	.slogan {
+		padding: 101px 15px 135px 15px;
+		/* 關掉網頁版 padding 就會正常 */
+		max-width: 100%;
+		height: auto;
+	}
+
+	.slogan h2 {
+		font-size: 32px;
+		line-height: 48px;
+		color: #fff;
+		z-index: 3;
+	}
+
+	.slogan p {
+		font-size: 24px;
+		color: #fff;
+		z-index: 3;
+		line-height: 36px;
+	}
+	
+	.shop-now{
+		display: block;
+		font-size: 28px;
+		color: #fff;
+		z-index: 3;
+		width: 100%;
+		text-align: center;
+		border: 1px #fff solid;
+		border-radius: 30px;
+		padding: 13px 0;
+	}
+
+	.Gabrielle, .Five, .CHANEL, .info, .else, .recycle {
+		flex-direction: column;
+		flex-wrap: wrap;
+		.text {
+			padding: 8px 15px 32px 15px;
+		}
+		.product{
+			width: 90%;
+		}
+	}
+	.Gabrielle, .Five, .CHANEL, .info, .recycle {
+		padding: 0 15px;
+	}
+	.Gabrielle, .CHANEL {
+		flex-direction: column-reverse;
+	}
+
+	.else {
+		flex-wrap: wrap;
+		padding: 40px 15px;
+	}
+
+	.Subscribe {
+		position: relative;
+		& img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 0;
+		}
+		.remember {
+			position: absolute;
+			padding:315px 15px 192px 15px;
+			z-index: 1;
+			& p {
+				color: #8D8D8D;
+				font-size: 32px;
+				line-height: 48px;
+				
+			}
+		}
+		.email {
+			display: flex;
+			padding:428px 16px 112px 14px;
+			position: relative;
+			
+			& p {
+				font-size: 16px;
+			}
+
+			.add {
+				position: absolute;
+				display: block;
+				padding: 21px 56px 20px 16px;
+				background-color: #fff;
+				border: 1px #916000 solid;
+				color: #8D8D8D;
+				z-index: 2;
+			}
+			.button {
+			  position: absolute;
+				left:231px;
+				display: block;
+				padding: 21px 23px 20px 27px;
+				background-color: #916000;
+				color: #fff;
+				z-index: 3;
+				width:131px;
+			}
+	  }
+	}
+
+	.else-item{
+		flex-wrap: wrap;
+	}
+
+	.price {
+		margin-bottom: 32px;
+	}
+	.Body-Wash {
+		margin: 0;
+	}
+
+	.footer-menu {
+		display: none;
 	}
 }
