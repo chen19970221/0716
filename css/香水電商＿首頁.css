@@ -113,14 +113,8 @@ p {
 	.banner {
 		height: 870px;
 		max-width: 1920px;
-		position: relative;
-
-		.index1{
-		height: 870px;
-		width: 100%;
-		position: absolute;
-		z-index:1;
-		}
+		background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index1.jpg?raw=true) center/cover no-repeat;
+		
 
 		.slogan {
 			display: flex;
@@ -139,7 +133,7 @@ p {
 			& p	{
 				font-size: 24px;
 				color: #fff;
-				z-index: 3;
+				/* z-index: 3; */
 				width: 100%;
 				line-height: 36px;
 				margin-bottom: 16px;
@@ -149,7 +143,7 @@ p {
 				display: block;
 				font-size: 28px;
 				color: #fff;
-				z-index: 3;
+				/* z-index: 3; */
 				/* width: 445px; */
 				text-align: center;
 				border: 1px #fff solid;
@@ -425,7 +419,7 @@ p {
 	}
 }
 
-.bars {
+.Cart, .bars {
 	display: none;
 }
 

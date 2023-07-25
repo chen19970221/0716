@@ -54,8 +54,8 @@ table {
 }
 
 img {
-	height: 100%;
-	width: 100%;
+	height: auto;
+	max-width: 100%;
 	object-fit: fill;
 	display: block;
 }
@@ -78,25 +78,25 @@ h3 {
 }
 
 .container {
-	width:1920px;
+	max-width:1920px;
 	margin: 0 auto;
 }
 
 .header {
 	
 	.top{
-		padding: 0 405px;
 		height: 56px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding:0 21%;
+
 		.menu {
 			height: 56px;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
 			text-align:center;
-			
 			
 			& a{
 				margin-left: 32px;
@@ -106,9 +106,11 @@ h3 {
 		}
 	}
 	.brand-list {
+		width: 100%;
 		background-color: #916019;
 		display: flex;
-		padding: 14px 405px;
+		padding: 14px 21%;
+		margin:0 auto;
 
 		& a {
 			color: #fff;
@@ -120,7 +122,7 @@ h3 {
 }
 
 .content {
-	padding: 80px 405px 40px 405px;
+	padding: 80px 21% 40px 21%;
 
 
 	.product {
@@ -267,9 +269,95 @@ h3 {
 				line-height: 30px;
 				color: #fff;
 			}
-			
 		}
-		
 	}
 }
 
+.Cart, .bars {
+	display: none;
+}
+
+
+
+@media(max-width:375px){
+	.Cart, .bars {
+		display:block;
+		fill:#8D8D8D;
+	}
+
+	.top{
+		padding:0 15px;
+	}
+
+	.menu-icon {
+		display: none;
+	}
+	.brand-list {
+		display:none;
+	}
+
+	.content{
+		padding:42px 15px 40px 15px;
+	}
+	.card {
+		width:45%;
+	}
+
+	h3 {
+		font-size: 20px;
+		font-weight: 30px;
+	}
+
+	.Subscribe {
+		position: relative;
+		& img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 0;
+		}
+		.remember {
+			position: absolute;
+			padding:315px 15px 192px 15px;
+			z-index: 1;
+			& p {
+				color: #8D8D8D;
+				font-size: 32px;
+				line-height: 48px;
+			}
+		}
+		.email {
+			display: flex;
+			padding:428px 16px 112px 14px;
+			position: relative;
+			
+			& p {
+				font-size: 16px;
+			}
+
+			.add {
+				position: absolute;
+				display: block;
+				padding: 21px 56px 20px 16px;
+				background-color: #fff;
+				border: 1px #916000 solid;
+				color: #8D8D8D;
+				z-index: 2;
+			}
+			.button {
+			  position: absolute;
+				left:231px;
+				display: block;
+				padding: 21px 23px 20px 27px;
+				background-color: #916000;
+				color: #fff;
+				z-index: 3;
+				width:131px;
+			}
+	  }
+	}
+	.footer-menu {
+		display: none;
+	}
+	
+}
